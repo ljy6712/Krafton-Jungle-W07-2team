@@ -1,3 +1,6 @@
+## web_server 2team 진행 상황 Spread Sheet Link:
+https://docs.google.com/spreadsheets/d/1lpNXg5IyfwxqZxquJxwRj5Ku7QPoN9rH7fU7_fE7w28/edit#gid=660789305
+
 ####################################################################
 # CS:APP Proxy Lab
 #
