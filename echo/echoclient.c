@@ -15,11 +15,12 @@ int main(int argc, char **argv){
     clientfd = Open_clientfd(host, port); // 받은 host와 port에 연결 요청 듣고 있는 서버와 연결 설정 (반환값 IP 주소)
     Rio_readinitb(&rio, clientfd);
 
-    while(Fgets(buf, MAXLINE, stdin) != NULL){
+    while(Fgets(buf, MAXLINE, stdin) != NULL){ // 표준 입력에서 텍스트 줄을 반복해서 읽는 루프
         Rio_writen(clientfd, buf, strlen(buf));
         Rio_readlineb(&rio, buf, MAXLINE);
         Fputs(buf, stdout);
     }
+
     Close(clientfd); // 열었던 모든 식별자들을 명시적으로 닫아주는 함수(불필요함)
     exit(0); // 프로세스 종료
 }
